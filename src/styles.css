@@ -1,0 +1,31 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid #000;
+  background-color: grey;
+  color: #fff;
+}
+
+.body {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
