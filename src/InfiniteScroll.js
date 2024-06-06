@@ -14,7 +14,6 @@ export default function InfiniteScroll() {
       let start = page * itemtoLoad;
       let end = start + itemtoLoad;
       let Itemlist = data.slice(start, end);
-      console.log(Itemlist);
       setPosts((posts) => [...posts, ...Itemlist]);
     } catch (err) {
       console.error(err);
