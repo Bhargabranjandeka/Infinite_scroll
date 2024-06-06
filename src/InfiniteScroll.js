@@ -29,12 +29,18 @@ export default function InfiniteScroll() {
           setPage((page) => page + 1);
         }
       },
-      { threshold: 1 }
+      { threshold: 1 },
     );
 
     if (ObserveTarget.current) {
       observer.observe(ObserveTarget.current);
     }
+
+    return () => {
+      if (ObserveTarget.current) {
+        observer.unobserve(ObserveTarget.current);
+      }
+    };
   }, [ObserveTarget]);
 
   return (
